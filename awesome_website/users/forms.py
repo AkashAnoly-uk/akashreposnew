@@ -38,5 +38,12 @@ class CheckForm(forms.ModelForm):
         fields = ['mobile']
 
 
+class EmployeeInserForm(forms.ModelForm):
+    class Meta:
+        model = employee_details
+        fields = ['full_name', 'mobile', 'role', 'status'] 
+
+
+
         
         

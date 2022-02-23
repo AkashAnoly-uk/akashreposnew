@@ -10,23 +10,87 @@
 
 
 <h3>CLOSE PROJECTS</h3>
-<form action="" method="post" autocomplete="off">
-    {% csrf_token %}
+
+<table class="table table-borderless">
+  <thead class="border-bottom font-weight-bold">
+        <tr>
+            
+            <td>Project Close</td>
+            <!-- <td>PROJECTS</td> -->
+          
+         
+                
+        </tr>
+        
+  </thead>
+
+    <tbody>
+        <form action="" method="post" autocomplete="off">
+        {% csrf_token %}
+           
+                
+                    {% for i in dataset %} 
+
+                             
+                       <tr>     
+                          <td>
+                             
+                              <div>
+                                <input type="checkbox" id="Pname" name="interest" value="{{i.id}}">
+                                <label for="coding">{{i.project_name}}</label>
+                              </div>
+
+
+                        </td>
+
+
+                        
+                             
+                    {% endfor %} 
+
+
+
+                      
+                      </tr>
+
+                       <div class="row" style="margin-left: 400px;margin-top: -31px;">
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-info"><i class="fas fa-database"></i>
+                Submit</button>
+        </div>
+    </div>
+
+
+    </form>  
+     <div class="col-md-4" style="margin-left: 550px;margin-top:-33px;">
+            <a href="{% url 'assign_task' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> Back
+            </a>
+        </div>  
+
+</tbody>
+</table>
+ 
+
+<!-- <form action="" method="post" autocomplete="off">
+    {% csrf_token %} -->
 
       <!-- {{ form.as_p }} -->  
 
-    <p><label for="id_project_name">Project close :</label> </p>
+<!--     <p><label for="id_project_name">Project close :</label> </p> -->
      
-     <select name="option_close" id="select-statename" placeholder="Select An Option..." style="width: 400px;height:30px;">
+     <!-- <select name="option_close" id="select-statename" placeholder="Select An Option..." style="width: 400px;height:30px;"> -->
                     
-                    <option value = 'none'>Select an Option</option>
-                        <ul>
-                    {% for i in dataset %}        
-                        <option value="{{ i.id }}" >{{ i.project_name }} </option>
+                    <!-- <option value = 'none'>Select an Option</option> -->
+                      <!--   <ul>
+                    {% for i in dataset %}        --> 
+                        <!-- <option value="{{ i.id }}" >{{ i.project_name }} </option> -->
+                       <!--  <input type="checkbox" id="pname" name="option_close" value="{{i.id}}">
+                        <label for="coding">{{i.project_name}}</label><br>
                     {% endfor %}    
-                        </ul> 
+                        </ul>  -->
                     
-      </select>
+      <!-- </select> -->
 
                     
                     
@@ -49,18 +113,13 @@
    
 
 
-    <div class="row" style="margin-left: 400px;margin-top: -31px;">
-        <div class="col-md-8">
-            <button type="submit" class="btn btn-info"><i class="fas fa-database"></i>
-                Submit</button>
-        </div>
-    </div>    
+   
        
 
         
     
 
-</form>
+<!-- </form> -->
 
 <script type="text/javascript">
   $(document).ready(function () {

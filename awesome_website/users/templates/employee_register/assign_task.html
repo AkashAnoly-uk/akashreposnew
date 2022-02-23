@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 
-<h3><b>Assign Task <u>(Unassigned Users {{count}})</u>  [{{date}}]</b></h3>
+<h3><b>Assign Task <u>(Unassigned Users Day {{count}})</u>  [{{date}}]</b></h3>
 
 
 
@@ -41,18 +41,29 @@
                                 <input type="checkbox" id="fname" name="interest" value="{{name.id}}">
                                 <label for="coding">{{name.full_name}}</label>
                               </div>
+
+
                         </td>
+
+
                         
                              
                     {% endfor %}
+
+
+
                       
                       </tr>
+     
+
+
+
 
                 
 
             <div  style="margin-left: 300px;">          
                <!--  <p><label for="id_platform_name">Platform name:</label>      -->
-                <h3>Projects</h3>
+                <h3>Projects and Platform</h3>
                 
                 <select name="options" id="select-state" placeholder="Select An Option..." style="width: 300px;height:30px;">
                     
@@ -110,10 +121,92 @@
             <a href="{% url 'project_close' %}" class="btn btn-info">
                 <i class="fas fa-stream"></i> Close Project
             </a>
-        </div>        
+        </div>
+
+
 </form>
     
 </table>
+
+<h2><b><u>Night Employee ({{count_night}})</u></b></h2>
+ 
+
+ <form action="" method="post" autocomplete="off">
+        {% csrf_token %}
+
+
+
+           
+                 <div  style="margin-left: 300px;">          
+               <!--  <p><label for="id_platform_name">Platform name:</label>      -->
+                <h3>Projects</h3>
+                
+                <select name="options" id="select-state" placeholder="Select An Option..." style="width: 300px;height:30px;">
+                    
+                    <option value = 'none'>Select an Option</option>
+                        {% for proj in emp_proj %}
+                        <ul>
+                              <option value="{{proj.id}}" >{{proj.project_name}}------{{proj.platform_name}}</option>
+                        </ul> 
+                            
+                        {% endfor %}
+                            
+                     
+               </select>
+            </div>   
+
+      <div  style="margin-left: 670px;margin-top: -85px;">
+      <h3 >Teamleaders</h3>
+                
+                <select name="option_tl" id="select-state" placeholder="Select An Option..." style="width: 200px;height:30px;">
+                    
+                    <option value = 'none'>Select an Option</option>
+                        {% for tl in active_nighttl %}
+                        <ul>
+                              <option value="{{tl.id}}" >{{tl.full_name}}</option>
+                        </ul> 
+                            
+                        {% endfor %}
+                            
+
+
+
+
+                     
+      </select>
+      </div>
+
+      
+                    {% for names in active_night %}
+
+                             
+                       <tr>     
+                          <td>
+                             
+                              <div>
+                               
+                                <input type="checkbox" id="fname" name="interest" value="{{names.id}}">
+                                <label for="coding">{{names.full_name}}</label>
+                              
+                              </div>
+
+
+                        </td>
+
+
+                        
+                             
+                    {% endfor %}
+
+
+
+                      
+                      </tr>
+
+                <input type="submit" value="Submit" class="btn btn-info" style="margin-left:900px;margin-top: 0px;">
+     
+     </form>
+
 
 <script type="text/javascript">
   $(document).ready(function () {

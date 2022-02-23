@@ -1,0 +1,908 @@
+{% extends "employee_register/base.html" %}
+
+
+{% block content %}
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  width: 40%;
+  padding: 0px;
+}
+
+
+
+.columns1 {
+  float: left;
+  width: 30%;
+  /*padding: 0px;*/
+  margin-left:-130px ;
+}
+.columns2{
+ float: left;
+  width: 30%;
+  /*padding: 0px;*/
+  margin-left:-90px ;   
+}
+
+.columns3{
+
+  float: left;
+  width: 10%;
+  /*padding: 0px;*/
+  margin-left:-90px ;   
+}
+
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 70%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  font-size: 13px;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+
+
+
+<h2><b><u>Overall-Summary Date ({{date}}) </u></ul><b></h2>
+    <h3>(TOTAL ASSINEED ----{{counts_people}})</h3>
+
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+        <th>FULL NAME</th>
+      </tr>
+      <tr>  
+      <td>{{count__1}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <tr>
+        <th>Project & Platform Details</th>
+      </tr>
+      <tr>
+      {% for pro in pr1 %}  
+      <td>{{pro}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <tr>
+        <th>Project Count</th>
+      </tr>
+      <tr>
+      {% for pla in pla1 %}  
+      <td>{{pla}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+      <tr>
+        <th>Total Count</th>
+      </tr>
+      <tr>
+      <td>{{counttl1_emp}}</td>
+      </tr>
+    </table>
+  </div>
+       
+
+</div>
+
+
+<br>
+<br>
+
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__2}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro1 in pr2 %}  
+      <td>{{pro1}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla1 in pla2 %}  
+      <td>{{pla1}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl2_emp}}</td>
+      </tr>
+    </table>
+  </div>
+       
+
+</div>
+
+<br>
+<br>
+
+<!-- ============================0 -->
+
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__3}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro2 in pr3 %}  
+      <td>{{pro2}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla2 in pla3 %}  
+      <td>{{pla2}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl3_emp}}</td>
+      </tr>
+    </table>
+  </div>
+       
+
+</div>
+
+<br>
+<br>
+<!-- ============================ -->
+
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__2}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro1 in pr2 %}  
+      <td>{{pro1}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla1 in pla2 %}  
+      <td>{{pla1}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl2_emp}}</td>
+      </tr>
+    </table>
+  </div>
+       
+
+</div>
+
+<br>
+<br>
+
+<!-- ============================0 -->
+
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__4}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro3 in pr4 %}  
+      <td>{{pro3}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla3 in pla4 %}  
+      <td>{{pla3}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl4_emp}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+       
+
+<br>
+<br>
+<!-- =========================================== -->
+
+      
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__5}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro4 in pr5 %}  
+      <td>{{pro4}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla4 in pla5 %}  
+      <td>{{pla4}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl5_emp}}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<br>
+<br>
+
+  <!-- ====================================== -->
+  <div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__4}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro3 in pr4 %}  
+      <td>{{pro3}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla3 in pla4 %}  
+      <td>{{pla3}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl4_emp}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+       
+<br>
+<br>
+
+<!-- =========================================== -->
+
+      
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__6}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro5 in pr6 %}  
+      <td>{{pro5}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla5 in pla6 %}  
+      <td>{{pla5}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl6_emp}}</td>
+      </tr>
+    </table>
+  </div>
+
+<!-- =============================== -->
+
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__7}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro6 in pr7 %}  
+      <td>{{pro6}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla6 in pla7 %}  
+      <td>{{pla6}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl7_emp}}</td>
+      </tr>
+    </table>
+  </div>
+
+<!-- ================================ -->
+
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__8}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro7 in pr8 %}  
+      <td>{{pro7}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla7 in pla8 %}  
+      <td>{{pla7}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl8_emp}}</td>
+      </tr>
+    </table>
+  </div>
+
+<!-- ============================ -->
+
+<div class="row">
+  <div class="column">
+    <table>
+      <!-- <tr>
+        <th>FULL NAME</th>
+      </tr> -->
+      <tr>  
+      <td>{{count__9}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="columns1">
+    <table>
+      <!-- <tr>
+        <th>Project & Platform Details</th>
+      </tr> -->
+      <tr>
+      {% for pro8 in pr9 %}  
+      <td>{{pro8}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+  </div>
+
+
+
+  <div class="columns2">
+    <table>
+      <!-- <tr>
+        <th>Project Count</th>
+      </tr> -->
+      <tr>
+      {% for pla8 in pla9 %}  
+      <td>{{pla8}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+       
+        
+
+  <div class="columns3">
+    <table>
+    <!--   <tr>
+        <th>Total Count</th>
+      </tr> -->
+      <tr>
+      <td>{{counttl9_emp}}</td>
+      </tr>
+    </table>
+  </div>
+
+
+
+</div>
+        
+      
+      
+        
+        
+      
+
+        
+        
+      
+
+ 
+      
+
+  
+  <!-- <div class="columnsn">
+    <table class="projs">
+      <tr>
+        <th>Project Name</th>
+      </tr>
+       {% for datapr in proj_name %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+        
+    </table>
+  </div> -->
+        
+
+
+
+  
+  <!-- <div class="columns">
+    <table>
+      <tr>
+        <th>Platform Name</th>
+        
+      </tr>
+       {% for datapl in pla_name %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %} 
+        
+    </table>
+
+  </div> -->
+  
+  <!-- <div class="columnsm">
+    <table>
+      <tr>
+      <th>TeamLeader Name</th>
+      </tr>
+       {% for tl in tl_fulname %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+   
+    </table>
+  </div>
+        
+</div> -->
+
+
+
+<!-- <h2><b><u>Overall-Summary Date ({{date}}) </u></ul><b></h2>
+    <h3>(TOTAL ASSINEED ----{{counts_people}})</h3>
+    <div class="col-md-8" ><br>
+            <a href="{% url 'assign_task' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> BACK 
+            </a>
+        </div>
+
+<table class="table table-borderless">
+  <thead class="border-bottom font-weight-bold">
+        <tr>
+            
+            <td><u>FULL NAME</u></td>
+            <td><u>ALL PROJECTS &PLATFORMS DETAILS</u></td>
+            <td><u>TOTAL PEOPLE</u></td>
+            
+          
+         
+                
+        </tr>
+        
+  </thead>
+
+  <tbody>
+
+           <tr>     
+            <td>{{count__1}}</td>
+            
+            {% for pr in pr1 %}
+            <td>{{pr}}</td>\n
+            {% endfor %}
+
+            <td></td>
+        </tr> -->
+
+           <!--  <td>{{counttl1_emp}}</td>
+           </tr> -->
+<!-- 
+           <tr>     
+            <td>{{count2}}</td>
+            <td>{{counttl2_2}}</td>
+            <td>{{counttl2_emp}}</td>
+           </tr>
+
+            <tr>     
+            <td>{{count3}}</td>
+            <td>{{counttl3_3}}</td>
+            <td>{{counttl3_emp}}</td>
+           </tr>
+
+           <tr>     
+            <td>{{count4}}</td>
+            <td>{{counttl4_4}}</td>
+            <td>{{counttl4_emp}}</td>
+           </tr>
+
+           <tr>     
+            <td>{{count5}}</td>
+            <td>{{counttl5_5}}</td>
+            <td>{{counttl5_emp}}</td>
+           </tr>
+
+           <tr>     
+            <td>{{count6}}</td>
+            <td>{{counttl6_6}}</td>
+            <td>{{counttl6_emp}}</td>
+           </tr>
+
+           <tr>     
+            <td>{{count7}}</td>
+            <td>{{counttl7_7}}</td>
+            <td>{{counttl7_emp}}</td>
+           </tr>
+
+           <tr>     
+            <td>{{count8}}</td>
+            <td>{{counttl8_8}}</td>
+            <td>{{counttl8_emp}}</td>
+           </tr>
+
+           <tr>     
+            <td>{{count9}}</td>
+            <td>{{counttl9_9}}</td>
+            <td>{{counttl9_emp}}</td>
+           </tr>
+
+
+
+            <tr>     
+            <td>{{count10}}</td>
+            <td>{{counttl10_10}}</td>
+            <td>{{counttl10_emp}}</td>
+           </tr>
+
+        <tr>     
+            <td>{{count11}}</td>
+            <td>{{counttl11_11}}</td>
+            <td>{{counttl11_emp}}</td>
+        </tr>
+
+        <tr>     
+            <td>{{count12}}</td>
+            <td>{{counttl12_12}}</td>
+            <td>{{counttl12_emp}}</td>
+        </tr>  -->            
+
+
+<!-- 
+  </tbody>
+
+</table>
+ -->
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,83 @@
+{% extends "employee_register/base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<h1>Insert New Employee Data</h1>
+
+<form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+
+      <!-- {{ form.as_p }}   -->
+
+      <p>
+    <label for="id_full_name">Full name:</label>
+    <input type="text" name="full_name" maxlength="150" required="" id="id_full_name">
+    
+    
+  </p>
+
+  <p>
+    <label for="id_mobile">Mobile:</label>
+    <input type="text" name="mobile" maxlength="150" required="" id="id_mobile">
+    
+    
+  </p>
+
+  <label for="cars">Role:</label>
+
+<select name="actives" id="employe_ids">
+  
+  <option value="IA">IA</option>
+  <option value="TL">TL</option>
+  <option value="TL_Night">TL_Night</option>
+  <option value="IA_Night">IA_Night</option>
+
+</select>
+<br>
+
+<label for="cars">Default:For Day Active  Night ActiveN:</label>
+
+<select name="active" id="employe_active">
+  
+  
+  <option value="Active">Active</option>
+  <option value="ActiveN">ActiveN</option>
+  
+  
+
+</select>
+
+  <!-- <p>
+    <label for="id_role">Role:</label>
+    <input type="text" name="role" maxlength="150" required="" id="id_role">
+    
+    
+  </p> -->
+
+ <!--  <p>
+    <label for="id_status">Status:</label>
+    <input type="text" name="status" maxlength="50" required="" id="id_status">
+    
+  </p> -->
+    
+      
+    
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i>
+                Submit</button>
+        </div>
+
+    </div>
+  
+    
+   
+</form>
+
+
+{% endblock content %}
+
+

@@ -27,7 +27,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -93,11 +93,18 @@ WSGI_APPLICATION = 'awesome_website.wsgi.application'
 
 DATABASES = {
     'default': {
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'djangodatabase',
+        # 'USER': 'master',
+        # 'PASSWORD':'password',
+        # 'HOST': 'instance1.cyl1n7rcqrgn.us-east-1.rds.amazonaws.com',
+        # 'PORT': '3306',
+
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangodatabase',
-        'USER': 'newuser',
+        'USER': 'root',
         'PASSWORD':'password',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
 
 
@@ -155,9 +162,9 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import pymysql
+# import pymysql
 
-pymysql.install_as_MySQLdb()
+# pymysql.install_as_MySQLdb()
 
 
 # https://www.javahelps.com/2018/10/install-mysql-with-phpmyadmin-on-ubuntu.html

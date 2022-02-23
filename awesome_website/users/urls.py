@@ -12,7 +12,8 @@ urlpatterns = [
     path('assigned/', views.assigned,name='assigned'),
     path('project_close/',views.project_close, name="project_close"),
     path('reassign_task/',views.reassign_task, name="reassign_task"),
-    # path('assign_previousdata/',views.assign_previousdata, name="assign_previousdata")
+    path('create_person/',views.create_person, name="create_person"),
+    path('overall_data/',views.overall_data, name="overall_data")
     
     
 

@@ -5,6 +5,33 @@
 
    
 <h2 style="color: teal;"><u>ASSIGNED PERSONS LIST [ {{date}}  ]</u></h2>
+<h3><u>Total Assigned  {{counts_ass}}</u></h3>
+ <div class="col-md-8" ><br>
+            <a href="{% url 'assign_task' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> BACK 
+            </a>
+        </div>
+  <div class="col-md-8"  style="margin-left: 100px;margin-top: -60px;"><br>
+            <a href="{% url 'overall_data' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> Overall Today Data 
+            </a>
+        </div>
+
+
+    <div class="col-md-8" ><br>
+            <a href="{% url 'reassign_task' %}" style="color:whitesmoke;margin-left: 300px;margin-top: -110px;" class="btn btn-info">
+                <i class="fas fa-stream"></i> RE--ASSIGN TASK
+            </a>
+        </div>    
+
+
+
+
+        <div class="col-md-8" ><br>
+            <a href="{% url 'assign_previous' %}" class="btn btn-info" style="margin-left: 500px;margin-top: -210px;">
+                <i class="fas fa-stream"></i> YESTERDAY 
+            </a>
+        </div>                   
 
 
 <style>
@@ -24,19 +51,19 @@
 }
 .columnsn {
   float: left;
-  width: 30%;
+  width: 39%;
   /*padding: 0px;*/
-  margin-left:-130px ;
+  margin-left:-140px ;
 }
 .columns {
   float: left;
-  width: 20%;
+  width: 16%;
   /*padding: -5px;*/
-  margin-left: -90px;
+  margin-left: -120px;
 }
 .columnsm {
   float: left;
-  width: 30%;
+  width: 22%;
   /*padding: 0px;*/
   margin-left:-60px ;
 }
@@ -67,7 +94,7 @@ tr:nth-child(even) {
 </style>
 
 
-
+<br>
 
 
 <div class="row">
@@ -78,37 +105,44 @@ tr:nth-child(even) {
         <th>MOBILE</th>
         
       </tr>
-      {% for data in emp_det %}
       
+      {% for data in emp_det %}
       <tr>
+        
         <td>{{data.full_name}}</td>
         <td>{{data.mobile}}</td>
+        
       {% endfor %}  
       </tr>
+
+ 
       
     </table>
   </div>
+
   
   <div class="columnsn">
     <table class="projs">
       <tr>
         <th>Project Name</th>
-        
-        
       </tr>
        {% for datapr in proj_name %}  
       <tr>
         <td>{{datapr}}</td>
       </tr>
-      {% endfor %} 
+      {% endfor %}
+        
     </table>
   </div>
+        
+
+
+
   
   <div class="columns">
     <table>
       <tr>
         <th>Platform Name</th>
-        
         
       </tr>
        {% for datapl in pla_name %}  
@@ -116,54 +150,38 @@ tr:nth-child(even) {
         <td>{{datapl}}</td>
       </tr>
       {% endfor %} 
+        
     </table>
+
   </div>
+  
   <div class="columnsm">
     <table>
       <tr>
-        <th>TeamLeader Name</th>
-        
-        
+      <th>TeamLeader Name</th>
       </tr>
        {% for tl in tl_fulname %}  
       <tr>
-        <td>{{tl}}</td>
+      <td>{{tl}}</td>
       </tr>
-      {% endfor %} 
+       {% endfor %}
+   
     </table>
   </div>
-
-  
-       
-        <div class="col-md-8" ><br>
-            <a href="{% url 'assign_task' %}" class="btn btn-info">
-                <i class="fas fa-stream"></i> BACK TO---ASSSIGN TASK
-            </a>
-        </div> 
-
-         <div class="col-md-8" ><br>
-            <a href="{% url 'assign_previous' %}" class="btn btn-info">
-                <i class="fas fa-stream"></i> BACK TO---YESTERDAY TASK
-            </a>
-        </div>      
-       
-     
-
+        
 </div>
-<br>
-<br>
-<br>
 
-<h2 style="color:deepskyblue;"><u>RE--ASSIGNED PERSON LIST [ {{date}}  ]</u></h2>
+
+
+
+
+
+
 
 <div class="row">
   <div class="column">
     <table>
-      <tr>
-        <th>FULL NAME</th>
-        <th>MOBILE</th>
-        
-      </tr>
+  
       {% for datan in ressignm_det %}
       
       <tr>
@@ -177,11 +195,7 @@ tr:nth-child(even) {
   
   <div class="columnsn">
     <table>
-      <tr>
-        <th>Project Name</th>
-        
-        
-      </tr>
+      
        {% for datapre in se_proj %}  
       <tr>
         <td>{{datapre}}</td>
@@ -192,11 +206,7 @@ tr:nth-child(even) {
   
   <div class="columns">
     <table>
-      <tr>
-        <th>Platform Name</th>
-        
-        
-      </tr>
+   
        {% for datapll in se_plat %}  
       <tr>
         <td>{{datapll}}</td>
@@ -205,14 +215,33 @@ tr:nth-child(even) {
     </table>
   </div>
 
+    <div class="columnsm">
+    <table>
+    
        
-        <div class="col-md-8" ><br>
-            <a href="{% url 'reassign_task' %}" style="color:whitesmoke;" class="btn btn-info">
-                <i class="fas fa-stream"></i> BACK TO RE--ASSIGN TASK
-            </a>
-        </div>    
+       {% for tls in tl__fulname %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+        
+
+      
+
+    </table>
+  
+  </div>
+
+</div>
+
+ 
+
        
-     
+       
+       
+       
+
+      
 
 </div>
 
