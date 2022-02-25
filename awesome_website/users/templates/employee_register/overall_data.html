@@ -141,9 +141,15 @@ tr:nth-child(even) {
       <tr>
         <th>Total Count</th>
       </tr>
-      <tr>
-      <td>{{counttl1_emp}}</td>
+       <tr>
+      {% if counttl1_emp == '' and counttls1_emp == '' %}  
+
+      <td>{{main_count1}}</td>
+      
+      {% else %}
+      <td>{{main_count1}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
        
@@ -210,9 +216,15 @@ tr:nth-child(even) {
   <div class="columns3">
     <table>
     
-      <tr>
-      <td>{{counttl2_emp}}</td>
+       <tr>
+      {% if counttl2_emp == '' and counttls2_emp == '' %}  
+
+      <td>{{main_count2}}</td>
+      
+      {% else %}
+      <td>{{main_count2}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
        
@@ -292,8 +304,14 @@ tr:nth-child(even) {
         <th>Total Count</th>
       </tr> -->
       <tr>
-      <td>{{counttl3_emp}}</td>
+      {% if counttl3_emp == '' and counttls3_emp == '' %}  
+
+      <td>{{main_count3}}</td>
+      
+      {% else %}
+      <td>{{main_count3}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
        
@@ -371,9 +389,15 @@ tr:nth-child(even) {
     <!--   <tr>
         <th>Total Count</th>
       </tr> -->
-      <tr>
-      <td>{{counttl4_emp}}</td>
+       <tr>
+      {% if counttl4_emp == '' and counttls4_emp == '' %}  
+
+      <td>{{main_count4}}</td>
+      
+      {% else %}
+      <td>{{main_count4}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 </div>
@@ -449,9 +473,15 @@ tr:nth-child(even) {
     <!--   <tr>
         <th>Total Count</th>
       </tr> -->
-      <tr>
-      <td>{{counttl5_emp}}</td>
+       <tr>
+      {% if counttl5_emp == '' and counttls5_emp == '' %}  
+
+      <td>{{main_count5}}</td>
+      
+      {% else %}
+      <td>{{main_count5}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 
@@ -526,9 +556,15 @@ tr:nth-child(even) {
     <!--   <tr>
         <th>Total Count</th>
       </tr> -->
-      <tr>
-      <td>{{counttl6_emp}}</td>
+       <tr>
+      {% if counttl6_emp == '' and counttls6_emp == '' %}  
+
+      <td>{{main_count6}}</td>
+      
+      {% else %}
+      <td>{{main_count6}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 
@@ -598,9 +634,15 @@ tr:nth-child(even) {
   <div class="columns3">
     <table>
     
-      <tr>
-      <td>{{counttl7_emp}}</td>
+       <tr>
+      {% if counttl7_emp == '' and counttls7_emp == '' %}  
+
+      <td>{{main_count7}}</td>
+      
+      {% else %}
+      <td>{{main_count7}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 
@@ -676,9 +718,15 @@ tr:nth-child(even) {
     <!--   <tr>
         <th>Total Count</th>
       </tr> -->
-      <tr>
-      <td>{{counttl8_emp}}</td>
+       <tr>
+      {% if counttl8_emp == '' and counttls8_emp == '' %}  
+
+      <td>{{main_count8}}</td>
+      
+      {% else %}
+      <td>{{main_count8}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 <br>
@@ -744,9 +792,15 @@ tr:nth-child(even) {
   <div class="columns3">
     <table>
     
-      <tr>
-      <td>{{counttl9_emp}}</td>
+       <tr>
+      {% if counttl9_emp == '' and counttls9_emp == '' %}  
+
+      <td>{{main_count9}}</td>
+      
+      {% else %}
+      <td>{{main_count9}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 </div>
@@ -825,9 +879,15 @@ tr:nth-child(even) {
     <!--   <tr>
         <th>Total Count</th>
       </tr> -->
-      <tr>
-      <td>{{counttl10_emp}}</td>
+       <tr>
+      {% if counttl10_emp == '' and counttls10_emp == '' %}  
+
+      <td>{{main_count10}}</td>
+      
+      {% else %}
+      <td>{{main_count10}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 </div>
@@ -902,9 +962,15 @@ tr:nth-child(even) {
     <!--   <tr>
         <th>Total Count</th>
       </tr> -->
-      <tr>
-      <td>{{counttl11_emp}}</td>
+       <tr>
+      {% if counttl11_emp == '' and counttls11_emp == '' %}  
+
+      <td>{{main_count11}}</td>
+      
+      {% else %}
+      <td>{{main_count11}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 
@@ -980,8 +1046,14 @@ tr:nth-child(even) {
         <th>Total Count</th>
       </tr> -->
       <tr>
-      <td>{{counttl12_emp}}</td>
+      {% if counttl12_emp == '' and counttls12_emp == '' %}  
+
+      <td>{{main_count12}}</td>
+      
+      {% else %}
+      <td>{{main_count12}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 </div>
@@ -1057,15 +1129,22 @@ tr:nth-child(even) {
     <!--   <tr>
         <th>Total Count</th>
       </tr> -->
-      <tr>
-      <td>{{counttl13_emp}}</td>
+       <tr>
+      {% if counttl13_emp == '' and counttls13_emp == '' %}  
+
+      <td>{{main_count13}}</td>
+      
+      {% else %}
+      <td>{{main_count13}}</td>
       </tr>
+      {% endif %}
     </table>
   </div>
 
 
 
 </div>
+
 <br>
 {% endif %}
         

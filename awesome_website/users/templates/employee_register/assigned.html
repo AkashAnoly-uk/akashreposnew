@@ -18,11 +18,7 @@
         </div>
 
 
-    <div class="col-md-8" ><br>
-            <a href="{% url 'reassign_task' %}" style="color:whitesmoke;margin-left: 300px;margin-top: -110px;" class="btn btn-info">
-                <i class="fas fa-stream"></i> RE--ASSIGN TASK
-            </a>
-        </div>    
+     
 
 
 
@@ -51,7 +47,7 @@
 }
 .columnsn {
   float: left;
-  width: 39%;
+  width: 43%;
   /*padding: 0px;*/
   margin-left:-140px ;
 }
@@ -59,7 +55,7 @@
   float: left;
   width: 16%;
   /*padding: -5px;*/
-  margin-left: -120px;
+  margin-left: -130px;
 }
 .columnsm {
   float: left;
@@ -94,8 +90,360 @@ tr:nth-child(even) {
 </style>
 
 
-<br>
+<!-- <div class="row">
+  <div class="column">
+    <table>
+      <tr>
+      <th>FULL NAME</th>
+      </tr>
+      {% for data in empnames1 %}
+      <tr>
+        <td>{{data}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data1 in empnames2 %}
+      <tr>
+        <td>{{data1}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data2 in empnames3 %}
+      <tr>
+        <td>{{data2}}</td>
+      {% endfor %}  
+      </tr>
+       {% for data3 in empnames4 %}
+      <tr>
+        <td>{{data3}}</td>
+      {% endfor %}  
+      </tr>
+       {% for data4 in empnames5 %}
+      <tr>
+        <td>{{data4}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data5 in empnames6 %}
+      <tr>
+        <td>{{data5}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data6 in empnames7 %}
+      <tr>
+        <td>{{data6}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data7 in empnames8 %}
+      <tr>
+        <td>{{data7}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data8 in empnames9 %}
+      <tr>
+        <td>{{data8}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data9 in empnames10 %}
+      <tr>
+        <td>{{data9}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data10 in empnames11 %}
+      <tr>
+        <td>{{data10}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data11 in empnames12 %}
+      <tr>
+        <td>{{data11}}</td>
+      {% endfor %}  
+      </tr>
+      {% for data12 in empnames13 %}
+      <tr>
+        <td>{{data12}}</td>
+      {% endfor %}  
+      </tr>
 
+        
+        
+      
+        
+      
+        
+
+ 
+      
+    </table>
+  </div>
+
+  
+  <div class="columnsn">
+    <table class="projs">
+      <tr>
+      <th>Project Name</th>
+      </tr>
+       {% for datapr in proj1 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr1 in proj2 %}  
+      <tr>
+        <td>{{datapr1}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr2 in proj3 %}  
+      <tr>
+        <td>{{datapr2}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr3 in proj4 %}  
+      <tr>
+        <td>{{datapr3}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr4 in proj5 %}  
+      <tr>
+        <td>{{datapr4}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr5 in proj6 %}  
+      <tr>
+        <td>{{datapr5}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr6 in proj7 %}  
+      <tr>
+        <td>{{datapr6}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr7 in proj8 %}  
+      <tr>
+        <td>{{datapr7}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr8 in proj9 %}  
+      <tr>
+        <td>{{datapr8}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapr9 in proj10 %}  
+      <tr>
+        <td>{{datapr9}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr10 in proj11 %}  
+      <tr>
+        <td>{{datapr10}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr11 in proj12 %}  
+      <tr>
+        <td>{{datapr11}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapr12 in proj13 %}  
+      <tr>
+        <td>{{datapr12}}</td>
+      </tr>
+      {% endfor %}
+
+        
+    </table>
+  </div>
+        
+
+
+
+  
+  <div class="columns">
+    <table>
+      <tr>
+        <th>Platform Name</th>
+        
+      </tr>
+       {% for datapl in plat1 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl1 in plat2 %}  
+      <tr>
+        <td>{{datapl1}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapl2 in plat3 %}  
+      <tr>
+        <td>{{datapl2}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl3 in plat4 %}  
+      <tr>
+        <td>{{datapl3}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl4 in plat5 %}  
+      <tr>
+        <td>{{datapl4}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapl5 in plat6 %}  
+      <tr>
+        <td>{{datapl5}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl6 in plat7 %}  
+      <tr>
+        <td>{{datapl6}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl7 in plat8 %}  
+      <tr>
+        <td>{{datapl7}}</td>
+      </tr>
+      {% endfor %}
+      
+      {% for datapl8 in plat9 %}  
+      <tr>
+        <td>{{datapl8}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl9 in plat10 %}  
+      <tr>
+        <td>{{datapl9}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl10 in plat11 %}  
+      <tr>
+        <td>{{datapl10}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl11 in plat12 %}  
+      <tr>
+        <td>{{datapl11}}</td>
+      </tr>
+      {% endfor %}
+
+      {% for datapl12 in plat13 %}  
+      <tr>
+        <td>{{datapl12}}</td>
+      </tr>
+      {% endfor %}
+
+     
+
+        
+    </table>
+
+  </div>
+  
+  <div class="columnsm">
+    <table>
+      <tr>
+      <th>TeamLeader Name</th>
+      </tr>
+       {% for tl in new_tl1 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+       {% for tl1 in new_tl2 %}  
+      <tr>
+      <td>{{tl1}}</td>
+      </tr>
+       {% endfor %}
+       {% for tl2 in new_tl3 %}  
+      <tr>
+      <td>{{tl2}}</td>
+      </tr>
+       {% endfor %}
+
+       {% for tl3 in new_tl4 %}  
+      <tr>
+      <td>{{tl3}}</td>
+      </tr>
+       {% endfor %}
+
+       {% for tl4 in new_tl5 %}  
+      <tr>
+      <td>{{tl4}}</td>
+      </tr>
+       {% endfor %}
+
+       {% for tl5 in new_tl6 %}  
+      <tr>
+      <td>{{tl5}}</td>
+      </tr>
+       {% endfor %}
+
+       {% for tl6 in new_tl7 %}  
+      <tr>
+      <td>{{tl6}}</td>
+      </tr>
+       {% endfor %}
+
+       {% for tl7 in new_tl8 %}  
+      <tr>
+      <td>{{tl7}}</td>
+      </tr>
+       {% endfor %}
+
+
+       {% for tl8 in new_tl9 %}  
+      <tr>
+      <td>{{tl8}}</td>
+      </tr>
+       {% endfor %}
+
+
+       {% for tl9 in new_tl10 %}  
+      <tr>
+      <td>{{tl9}}</td>
+      </tr>
+       {% endfor %}
+
+
+       {% for tl10 in new_tl11 %}  
+      <tr>
+      <td>{{tl10}}</td>
+      </tr>
+       {% endfor %}
+
+
+
+       {% for tl11 in new_tl12 %}  
+      <tr>
+      <td>{{tl11}}</td>
+      </tr>
+       {% endfor %}
+
+
+
+
+       {% for tl12 in new_tl13 %}  
+      <tr>
+      <td>{{tl12}}</td>
+      </tr>
+       {% endfor %}
+
+
+
+   
+    </table>
+  </div>
+        
+</div> -->
+
+
+
+<!-- =========================================== -->
 
 <div class="row">
   <div class="column">
@@ -105,7 +453,7 @@ tr:nth-child(even) {
         <th>MOBILE</th>
         
       </tr>
-      
+     <!-- =========================== --> 
       {% for data in emp_det %}
       <tr>
         
@@ -114,7 +462,223 @@ tr:nth-child(even) {
         
       {% endfor %}  
       </tr>
+      {% for datan in ressignm_det %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %}  
+      </tr>
+      <!-- ======================================== -->
+       {% for data in emp_det_id1 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det1 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %}  
+      </tr>
+      <!-- ============================================= -->
+      {% for data in emp_det_id2 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det2 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %}
+      </tr>
+      <!-- ===================================== --> 
+      {% for data in emp_det_id3 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det3 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %}
+      </tr> 
+      <!-- ====================================== -->
+       {% for data in emp_det_id4 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det4 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+      <!-- ================================= -->
+      {% for data in emp_det_id5 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det5 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+      <!-- =============================== -->
+      {% for data in emp_det_id6 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det6 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+      <!-- ============================== -->
+       {% for data in emp_det_id7 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det7 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+      <!-- ==================================== -->
+       {% for data in emp_det_id8 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det8 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+      <!-- ====================================== -->
 
+       {% for data in emp_det_id9 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det9 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+      <!-- ================================= -->
+       {% for data in emp_det_id10 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det10 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+
+      <!-- =================================== -->
+       {% for data in emp_det_id11 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det11 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+      <!-- =============================== -->
+       {% for data in emp_det_id12 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det12 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
+      <!-- ================================ -->
+       {% for data in emp_det_id13 %}
+      <tr>
+        
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+        
+      {% endfor %}  
+      </tr>
+      {% for datan in ressignm_det13 %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %} 
+      </tr>
  
       
     </table>
@@ -131,6 +695,158 @@ tr:nth-child(even) {
         <td>{{datapr}}</td>
       </tr>
       {% endfor %}
+      {% for datapre in se_proj %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+
+      <!-- ==================================== -->
+      {% for datapr in new_app1 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj1 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ==================================== --> 
+      {% for datapr in new_app2 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj2 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ==================================== -->
+       {% for datapr in new_app3 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj3 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================= -->
+      {% for datapr in new_app4 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj4 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =============================== -->
+      {% for datapr in new_app5 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj5 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =========================== -->
+      {% for datapr in new_app6 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj6 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =============================== -->
+      {% for datapr in new_app7 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj7 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ================================= -->
+       {% for datapr in new_app8 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj8 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================== -->
+       {% for datapr in new_app9 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj9 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ==================== -->
+       {% for datapr in new_app10 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj10 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =============================== -->
+       {% for datapr in new_app11 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj11 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================= -->
+       {% for datapr in new_app12 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj12 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =============================== -->
+       {% for datapr in new_app13 %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapre in se_proj13 %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %}
+     
+
+
         
     </table>
   </div>
@@ -149,7 +865,158 @@ tr:nth-child(even) {
       <tr>
         <td>{{datapl}}</td>
       </tr>
+      {% endfor %}
+      {% for datapll in se_plat %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
       {% endfor %} 
+      <!-- ======================================= -->
+        {% for datapl in new_prj1 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat1 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ======================================= -->
+
+       {% for datapl in new_prj2 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat2 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+
+      <!-- ========================================== -->
+       {% for datapl in new_prj3 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat3 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ========================================= -->
+       {% for datapl in new_prj4 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat4 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ========================================== -->
+      {% for datapl in new_prj5 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat5 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ======================================= -->
+      {% for datapl in new_prj6 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat6 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================= -->
+      {% for datapl in new_prj7 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat7 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ================================ -->
+      {% for datapl in new_prj8 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat8 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================== -->
+      {% for datapl in new_prj9 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat9 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =============================== -->
+      {% for datapl in new_prj10 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat10 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ================================ -->
+      {% for datapl in new_prj11 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat11 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =============================== -->
+      {% for datapl in new_prj12 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat12 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =================================== -->
+      {% for datapl in new_prj13 %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %}
+      {% for datapll in se_plat13 %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %}
+
         
     </table>
 
@@ -165,6 +1032,155 @@ tr:nth-child(even) {
       <td>{{tl}}</td>
       </tr>
        {% endfor %}
+        {% for tls in tl__fulname %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+
+      <!-- ========================== -->
+      {% for tl in tl_fulname1 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname1 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================ -->
+      {% for tl in tl_fulname2 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname2 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ================================== -->
+      {% for tl in tl_fulname3 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname3 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ==================================== -->
+       {% for tl in tl_fulname4 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname4 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================= -->
+       {% for tl in tl_fulname5 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname5 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================== -->
+      {% for tl in tl_fulname6 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname6 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- -================================= -->
+      {% for tl in tl_fulname7 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname7 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ==================================== -->
+      {% for tl in tl_fulname8 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname8 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ============================== -->
+      {% for tl in tl_fulname9 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname9 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- =================================== -->
+      {% for tl in tl_fulname10 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname10 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ================================== -->
+      {% for tl in tl_fulname11 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname11 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ====================================== -->
+      {% for tl in tl_fulname12 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname12 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
+      <!-- ================================== -->
+      {% for tl in tl_fulname13 %}  
+      <tr>
+      <td>{{tl}}</td>
+      </tr>
+       {% endfor %}
+        {% for tls in tl__fulname13 %}
+      <tr>
+        <td>{{tls}}</td>
+      </tr>
+      {% endfor %}
    
     </table>
   </div>
@@ -178,7 +1194,7 @@ tr:nth-child(even) {
 
 
 
-<div class="row">
+<!-- <div class="row">
   <div class="column">
     <table>
   
@@ -223,12 +1239,12 @@ tr:nth-child(even) {
       <tr>
         <td>{{tls}}</td>
       </tr>
-      {% endfor %}
+      {% endfor %} -->
         
 
       
 
-    </table>
+  <!--   </table>
   
   </div>
 
@@ -246,7 +1262,7 @@ tr:nth-child(even) {
 </div>
 
 
-
+ -->
 
 
 
