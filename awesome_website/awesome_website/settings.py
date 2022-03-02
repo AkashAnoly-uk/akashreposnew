@@ -93,19 +93,19 @@ WSGI_APPLICATION = 'awesome_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'djangodatabase',
-        # 'USER': 'master',
-        # 'PASSWORD':'password',
-        # 'HOST': 'instance1.cyl1n7rcqrgn.us-east-1.rds.amazonaws.com',
-        # 'PORT': '3306',
-
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangodatabase',
-        'USER': 'root',
+        'USER': 'master',
         'PASSWORD':'password',
-        'HOST': 'localhost',
+        'HOST': 'instance1.cyl1n7rcqrgn.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
+
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'djangodatabase',
+        # 'USER': 'root',
+        # 'PASSWORD':'password',
+        # 'HOST': 'localhost',
+        # 'PORT': '3306',
 
 
 
@@ -156,6 +156,9 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+import pymysql
+pymysql.version_info = (1, 4, 2, "final", 0)
+pymysql.install_as_MySQLdb()
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

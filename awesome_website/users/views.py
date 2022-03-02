@@ -54,13 +54,12 @@ def project_form(request):
             else:
                 pass
         id_filter = projects.objects.filter(pk__in=new_updatestes)        
-        context = {}        
+        # context = {}        
 
-        context["dataset"] = projects.objects.filter(open_status__gte='2022-02-04 13:49:16').filter(open_status__lte='2022-02-17 11:06:49')        
+        # context["dataset"] = projects.objects.filter(open_status__gte='2022-02-04 13:49:16').filter(open_status__lte='2022-02-17 11:06:49')        
 
         
-        return render(request, "employee_register/project_form.html",context)
-
+        return render(request, "employee_register/project_form.html")
         # reg = projects.objects.all()
         # today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
         # today_max = datetime.datetime.combine(datetime.date.today(), datetime.time.max)
@@ -88,11 +87,11 @@ def project_form(request):
         reg = projects(project_name=projnm, platform_name=platname, open_status=split_date)
         reg.save()
 
-        context = {}        
+        # context = {}        
 
-        context["dataset"] = projects.objects.filter(open_status__gte='2022-02-04 13:49:16').filter(open_status__lte='2022-02-17 11:06:49')
+        # context["dataset"] = projects.objects.filter(open_status__gte='2022-02-04 13:49:16').filter(open_status__lte='2022-02-17 11:06:49')
 
-        return render(request, "employee_register/project_form.html",context)
+        return render(request, "employee_register/project_form.html")
 
 
 
@@ -307,9 +306,177 @@ def assign_task(request):
 
 
 
+# def reassign_user(request):
+#     if request.method == "GET":
+#         new_date = dt.datetime.utcnow() + dt.timedelta(hours=5, minutes=30)
+#         today1 = str(new_date)
+#         split_a = today1.split(".")
+#         split_date = split_a[0]
+#         split_date1 = str(split_date).split(" ")
+#         split_daten = split_date1[0]
+#         today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
+     
+#         assign = assignment.objects.filter(date_from__gte=today_min)
+#         prjappend = []
+#         empidappend =[]
+
+
+
+#         for update_status in assign:
+            
+#             empsids = update_status.employeeid
+#             empidappend.append(empsids)
+#             projids = update_status.projectid
+#             prjappend.append(projids)
+
+
+            
+
+#         emp_det_id = employee_details.objects.values('id','full_name','mobile').filter(pk__in=empidappend)
+#         emp_projs = projects.objects.all()
+#         new_updatestes = []
+
+#         for n_update in emp_projs:
+#             open_o = n_update.open_status
+#             close_o = n_update.close_status
+
+#             if len(open_o) != 0 and len(close_o) ==0:
+#                 open_d = n_update.id
+#                 new_updatestes.append(open_d)
+
+#             else:
+#                 pass
+    
+
+    
+
+                
+#         id_filter = projects.objects.filter(pk__in=new_updatestes)  
+
+#         #------------------TODAY TASKS-------completee--------------- 
+
+#         assign = assignment.objects.filter(from_to__gte=today_min)
+             
+      
+#         empidappend = []
+
+#         for update_status in assign:
+#             empsids = update_status.employeeid
+            
+#             empidappend.append(empsids)
+            
+
+#         new_app= []
+
+       
+#         for ints in empidappend:
+#             ints = int(ints)
+#             new_app.append(ints)
+
+#         # print(new_app)
+#         # exit()
+
+ 
+#             # -------------------------------------------
+
+#         apppend_id = []
+#         active_emp_n = employee_details.objects.filter(status='Active').filter(role='IA')
+#         active_tl = employee_details.objects.filter(status='Active').filter(role='TL')
+
+#         assign2 = assignment.objects.filter(date_from__gte=today_min)
+
+#         new_id = []
+
+#         for new_updtaes in assign2:
+#             emps_ids = new_updtaes.employeeid
+            
+#             new_id.append(emps_ids)
+
+ 
+
+#         new_ints =[] 
+
+#         for intse in new_id:
+#             ints_d = int(intse)
+#             new_ints.append(ints_d)
+
+#         # print(new_ints)
+#         # exit()    
+
+   
+
+#         for i_d in active_emp_n:
+          
+#             apppend_id.append(i_d.id)
+
+#         new_apend_data = [] 
+
+#         # difference = set(new_app).symmetric_difference(set(new_ints))
+#         # list_difference = list(difference)
+#         # count_person = len(list_difference)
+ 
+ 
+#         active_emp = employee_details.objects.filter(status='Active').filter(pk__in=new_ints)
+
+ 
+#         return render(request, "employee_register/reassign_task.html",{'emp_det':active_emp,'active_tl':active_tl ,'emp_proj':id_filter, 'date':split_daten})
+
+#     else:
+#         if request.method == 'POST':
+#             recomme=request.POST.getlist('interest')
+#             platname = request.POST['options']
+#             tl_id = request.POST['option_tl']
+
+        
+#         if platname == 'none' and tl_id == 'none':
+            
+#             return HttpResponse("TL NAME AND PROJECTS MISSINGS")
+#         elif platname == 'none':
+            
+#             return HttpResponse("---------PROJECTS NAME _______MISSSING")
+#         elif tl_id == 'none':
+#             return HttpResponse("---------TL NAME _______MISSSING")
+#         else:
+#             for index, item in enumerate(recomme):
+#                 new_date = dt.datetime.utcnow() + dt.timedelta(hours=5, minutes=30)
+#                 today1 = str(new_date)
+#                 split_a = today1.split(".")
+#                 split_date = split_a[0]
+#                 split_date1 = str(split_date).split(" ")
+#                 split_daten = split_date1[0]
+#                 today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
+
+
+#                 # survey = assignment.objects.create(employeeid=item,projectid=platname,from_to=split_date,tl_id=tl_id)
+
+#                 ckeck = assignment.objects.filter(date_from__gte=today_min).filter(employeeid=item).exclude(first_work_done__isnull=True).exclude(first_work_done__exact='')
+                
+                
+                    
+
+#                 ckeck1 = assignment.objects.filter(from_to__gte=today_min).filter(employeeid=item).filter(first_work_done=' ')
+                
+
+#                 if ckeck.count() == 0:
+#                     print("Yes")
+#                     update = assignment.objects.filter(employeeid= item).filter(date_from__gte=today_min).update(first_work_done='Done')
+#                     survey = assignment.objects.create(employeeid=item,projectid=platname,from_to=split_date,tl_id=tl_id)
+#                 else:
+
+#                     if ckeck1.count() == 0:
+#                         print("same")
+#                         assignment.objects.filter(employeeid= item).filter(from_to__gte=today_min).update(first_work_done='Done')
+#                         survey = assignment.objects.create(employeeid=item,projectid=platname,from_to=split_date,tl_id=tl_id)
+                    
+      
+                
+            
+#             return render(request, "employee_register/assigned.html")
+  
+  
                 
 def reassign_task(request):
-    # return HttpResponse('wrong selected')
+    # return render(request, "employee_register/reassign_user.html")
     if request.method == "GET":
         new_date = dt.datetime.utcnow() + dt.timedelta(hours=5, minutes=30)
         today1 = str(new_date)
@@ -376,6 +543,9 @@ def reassign_task(request):
             ints = int(ints)
             new_app.append(ints)
 
+        # print(new_app)
+        # exit()
+
  
             # -------------------------------------------
 
@@ -400,6 +570,9 @@ def reassign_task(request):
             ints_d = int(intse)
             new_ints.append(ints_d)
 
+        # print(new_ints)
+        # exit()    
+
    
 
         for i_d in active_emp_n:
@@ -408,12 +581,12 @@ def reassign_task(request):
 
         new_apend_data = [] 
 
-        difference = set(new_app).symmetric_difference(set(new_ints))
-        list_difference = list(difference)
-        count_person = len(list_difference)
+        # difference = set(new_app).symmetric_difference(set(new_ints))
+        # list_difference = list(difference)
+        # count_person = len(list_difference)
  
  
-        active_emp = employee_details.objects.filter(status='Active').filter(pk__in=list_difference)
+        active_emp = employee_details.objects.filter(status='Active').filter(pk__in=new_ints)
 
  
         return render(request, "employee_register/reassign_task.html",{'emp_det':active_emp,'active_tl':active_tl ,'emp_proj':id_filter, 'date':split_daten})
@@ -441,10 +614,31 @@ def reassign_task(request):
                 split_date = split_a[0]
                 split_date1 = str(split_date).split(" ")
                 split_daten = split_date1[0]
-                survey = assignment.objects.create(employeeid=item,projectid=platname,from_to=split_date,tl_id=tl_id)
-                update = assignment.objects.filter(employeeid= item).update(first_work_done='Done')
+                today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
 
 
+                # survey = assignment.objects.create(employeeid=item,projectid=platname,from_to=split_date,tl_id=tl_id)
+
+                ckeck = assignment.objects.filter(date_from__gte=today_min).filter(employeeid=item).exclude(first_work_done__isnull=True).exclude(first_work_done__exact='')
+                
+                
+                    
+
+                ckeck1 = assignment.objects.filter(from_to__gte=today_min).filter(employeeid=item).filter(first_work_done=' ')
+                
+
+                if ckeck.count() == 0:
+                    print("Yes")
+                    update = assignment.objects.filter(employeeid= item).filter(date_from__gte=today_min).update(first_work_done='Done')
+                    survey = assignment.objects.create(employeeid=item,projectid=platname,from_to=split_date,tl_id=tl_id)
+                else:
+
+                    if ckeck1.count() == 0:
+                        print("same")
+                        assignment.objects.filter(employeeid= item).filter(from_to__gte=today_min).update(first_work_done='Done')
+                        survey = assignment.objects.create(employeeid=item,projectid=platname,from_to=split_date,tl_id=tl_id)
+                    
+      
                 
             
             return render(request, "employee_register/assigned.html")        
@@ -686,6 +880,8 @@ def assigned(request):
  
     assign_C = assignment.objects.filter(date_from__gte=today_min)
 
+
+
     tl1_ids = '528'
     
     # assign = assignment.objects.filter(first_work_done='').filter(date_from__gte=today_min)
@@ -732,13 +928,13 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment2 = assignment.objects.filter(from_to__gte=today_min)
-    assignment2 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl1_ids)
+    assignment1 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl1_ids)
 
     empidap =[]
     projap = []
     tls_part = []
 
-    for upd_status in assignment2:
+    for upd_status in assignment1:
         
         emp_id = upd_status.employeeid
         empidap.append(emp_id)
@@ -819,7 +1015,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment2 = assignment.objects.filter(from_to__gte=today_min)
-    assignment2 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl1_ids1)
+    assignment2 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl1_ids1)
 
     empidap1 =[]
     projap1 = []
@@ -909,7 +1105,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment2 = assignment.objects.filter(from_to__gte=today_min)
-    assignment2 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl2_ids2)
+    assignment2 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl2_ids2)
 
     empidap2 =[]
     projap2 = []
@@ -995,7 +1191,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment3 = assignment.objects.filter(from_to__gte=today_min)
-    assignment3 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl3_ids3)
+    assignment3 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl3_ids3)
 
     empidap3 =[]
     projap3 = []
@@ -1041,6 +1237,11 @@ def assigned(request):
     # assign = assignment.objects.filter(first_work_done='').filter(date_from__gte=today_min)
     assign = assignment.objects.filter(first_work_done='').filter(date_from__gte=today_min).filter(tl_id=tl4_ids4)
     # counts_ass = len(assign)
+    # assigned = assignment.objects.filter(first_work_done='Done').filter(date_from__gte=today_min)
+    # assignmentnew = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl4_ids4)
+
+    # print(assignment4)
+    # exit()
 
     
     empidappend4 =[]
@@ -1082,7 +1283,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment4 = assignment.objects.filter(from_to__gte=today_min)
-    assignment4 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl4_ids4)
+    assignment4 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl4_ids4)
 
     empidap4 =[]
     projap4 = []
@@ -1172,7 +1373,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment5 = assignment.objects.filter(from_to__gte=today_min)
-    assignment5 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl5_ids5)
+    assignment5 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl5_ids5)
 
     empidap5 =[]
     projap5 = []
@@ -1263,7 +1464,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment6 = assignment.objects.filter(from_to__gte=today_min)
-    assignment6 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl6_ids6)
+    assignment6 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl6_ids6)
 
     empidap6 =[]
     projap6 = []
@@ -1352,7 +1553,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment7 = assignment.objects.filter(from_to__gte=today_min)
-    assignment7 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl7_ids7)
+    assignment7 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl7_ids7)
 
     empidap7 =[]
     projap7 = []
@@ -1442,7 +1643,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment8 = assignment.objects.filter(from_to__gte=today_min)
-    assignment8 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl8_ids8)
+    assignment8 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl8_ids8)
 
     empidap8 =[]
     projap8 = []
@@ -1530,7 +1731,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment9 = assignment.objects.filter(from_to__gte=today_min)
-    assignment9 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl9_ids9)
+    assignment9 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl9_ids9)
 
     empidap9 =[]
     projap9 = []
@@ -1619,7 +1820,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment10 = assignment.objects.filter(from_to__gte=today_min)
-    assignment10 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl10_ids10)
+    assignment10 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl10_ids10)
 
     empidap10 =[]
     projap10 = []
@@ -1665,6 +1866,9 @@ def assigned(request):
     assign = assignment.objects.filter(first_work_done='').filter(date_from__gte=today_min).filter(tl_id=tl11_ids11)
     # counts_ass = len(assign)
 
+    # print(assign)
+    # exit()
+
     
     empidappend11 =[]
     prjappend11 = []
@@ -1707,7 +1911,8 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment11 = assignment.objects.filter(from_to__gte=today_min)
-    assignment11 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl11_ids11)
+    assignment11 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl11_ids11)
+
 
     empidap11 =[]
     projap11 = []
@@ -1796,7 +2001,7 @@ def assigned(request):
 
     # ------------------------------------Ressign part-----------------------------------
     # assignment12 = assignment.objects.filter(from_to__gte=today_min)
-    assignment12 = assignment.objects.filter(from_to__gte=today_min).filter(tl_id=tl12_ids12)
+    assignment12 = assignment.objects.filter(from_to__gte=today_min).filter(first_work_done='').filter(tl_id=tl12_ids12)
 
     empidap12 =[]
     projap12 = []
@@ -1843,6 +2048,7 @@ def assigned(request):
 
   # 'emp_det_id12':emp_det_id12,'new_app12':new_app12,'new_prj12':new_prj12,'tl_fulname12':tl_fulname12,'ressignm_det12':ressignm_det12,'se_proj12':se_proj12,'se_plat12':se_plat12,'tl__fulname12':tl__fulname12,
 
+     
 
 
     
@@ -4063,99 +4269,235 @@ def overall_data(request):
 
     #main datasds --------------------------------exit--------------------
     
-    # print(counttl1_emp)
+  
     print("====================================")
-    # print(counttls1_emp)
-    # exit()
 
 
-    if counttl1_emp != '' and counttls1_emp == '':
-        
+
+    # if counttl1_emp != '' and counttls1_emp == '':
+    #     main_count1 = counttl1_emp
+    # elif counttl1_emp != '':
+    #     main_count1 = counttls1_emp
+         
+    # else:
+    #     main_count1 = counttl1_emp + counttls1_emp
+
+    if counttl1_emp == '':
+        main_count1 = counttls1_emp
+    elif counttls1_emp == '':
         main_count1 = counttl1_emp
-
     else:
-        
         main_count1 = counttl1_emp + counttls1_emp
 
-        
-
-    if counttl2_emp != '' and counttls2_emp == '':
-        # main_count2 = counttl2_emp + counttls2_emp
+    
+    if counttl2_emp == '':
+        main_count2 = counttls2_emp
+    elif counttls2_emp == '':
         main_count2 = counttl2_emp
     else:
         main_count2 = counttl2_emp + counttls2_emp
 
-    if counttl3_emp != '' and counttls3_emp == '':
-        # main_count3 = counttl3_emp + counttls3_emp
+    if counttl3_emp == '':
+        main_count3 = counttls3_emp
+    elif counttls3_emp == '':
         main_count3 = counttl3_emp
     else:
-        main_count3 = counttl3_emp + counttls3_emp
-        
-    if counttl4_emp != '' and counttls4_emp == '':
-        # main_count4 = counttl4_emp + counttls4_emp
+        main_count3 = counttl3_emp + counttls3_emp    
+
+
+    if counttl4_emp == '':
+        main_count4 = counttls4_emp
+    elif counttls4_emp == '':
         main_count4 = counttl4_emp
     else:
         main_count4 = counttl4_emp + counttls4_emp
-        
 
-    if counttl5_emp != '' and counttls5_emp == '':
-        # main_count5 = counttl5_emp + counttls5_emp
+    if counttl5_emp == '':
+        main_count5 = counttls5_emp
+    elif counttls5_emp == '':
         main_count5 = counttl5_emp
     else:
         main_count5 = counttl5_emp + counttls5_emp
         
-    if counttl6_emp != '' and counttls6_emp == '':
-        # main_count6 = counttl6_emp + counttls6_emp
+
+
+    if counttl6_emp == '':
+        main_count6 = counttls6_emp
+    elif counttls6_emp == '':
         main_count6 = counttl6_emp
     else:
         main_count6 = counttl6_emp + counttls6_emp
-        
+    
 
-    if counttl7_emp != '' and counttls7_emp == '':
-        # main_count7 = counttl7_emp + counttls7_emp
+    if counttl7_emp == '':
+        main_count7 = counttls7_emp
+    elif counttls7_emp == '':
         main_count7 = counttl7_emp
     else:
         main_count7 = counttl7_emp + counttls7_emp
-    
-    if counttl8_emp != '' and counttls8_emp == '':
-        # main_count8 = counttl8_emp + counttls8_emp
+
+    if counttl8_emp == '':
+        main_count8 = counttls8_emp
+    elif counttls8_emp == '':
         main_count8 = counttl8_emp
     else:
         main_count8 = counttl8_emp + counttls8_emp
-
-    if counttl9_emp != '' and counttls9_emp == '':
-        # main_count9 = counttl9_emp + counttls9_emp
+        
+    
+    if counttl9_emp == '':
+        main_count9 = counttls9_emp
+    elif counttls9_emp == '':
         main_count9 = counttl9_emp
     else:
         main_count9 = counttl9_emp + counttls9_emp
-        
-    if counttl10_emp != '' and counttls10_emp == '':
-        # main_count10 = counttl10_emp + counttls10_emp
+
+    if counttl10_emp == '':
+        main_count10 = counttls10_emp
+    elif counttls10_emp == '':
         main_count10 = counttl10_emp
     else:
         main_count10 = counttl10_emp + counttls10_emp
         
-
-    if counttl11_emp != '' and counttls11_emp == '':
-        # main_count11 = counttl11_emp + counttls11_emp
+    
+    if counttl11_emp == '':
+        main_count11 = counttls11_emp
+    elif counttls11_emp == '':
         main_count11 = counttl11_emp
     else:
-        main_count11 = counttl11_emp + counttls11_emp                                       
+        main_count11 = counttl11_emp + counttls11_emp
 
 
-
-
-    if counttl12_emp != '' and counttls12_emp == '':
-        # main_count12 = counttl12_emp + counttls12_emp
+    if counttl12_emp == '':
+        main_count12 = counttls12_emp
+    elif counttls12_emp == '':
         main_count12 = counttl12_emp
     else:
         main_count12 = counttl12_emp + counttls12_emp
 
-    if counttl13_emp != '' and counttls13_emp == '':
-        # main_count13 = counttl13_emp + counttls13_emp
+
+
+    if counttl13_emp == '':
+        main_count13 = counttls13_emp
+    elif counttls13_emp == '':
         main_count13 = counttl13_emp
     else:
-        main_count13 = counttl13_emp + counttls13_emp    
+        main_count13 = counttl13_emp + counttls13_emp       
+
+
+
+
+
+            
+
+
+
+        
+
+        
+
+    # if counttl2_emp != '' and counttls2_emp == '':
+    #     # main_count2 = counttl2_emp + counttls2_emp
+    #     main_count2 = counttl2_emp
+    # elif counttl2_emp != '':
+    #     main_count2 = counttls2_emp
+
+    # else:
+    #     main_count2 = counttl2_emp + counttls2_emp
+
+   
+
+
+    # if counttl3_emp != '' and counttls3_emp == '':
+    #     # main_count3 = counttl3_emp + counttls3_emp
+    #     main_count3 = counttl3_emp
+    # elif counttl3_emp != '':
+    #     main_count3 = counttls3_emp
+         
+    # else:
+    #     main_count3 = counttl3_emp + counttls3_emp
+        
+   
+
+    # if counttl4_emp != '' and counttls4_emp == '':
+    #     # main_count4 = counttl4_emp + counttls4_emp
+    #     main_count4 = counttl4_emp
+    # else:
+    #     main_count4 = counttl4_emp + counttls4_emp
+
+    # if counttl4_emp == '':
+    #     main_count4 = counttls4_emp
+    # elif counttls4_emp == '':
+    #     main_count4 = counttl4_emp
+    # else:
+    #     main_count4 = counttl4_emp + counttls4_emp
+   
+
+
+    # if counttl5_emp != '' and counttls5_emp == '':
+    #     # main_count5 = counttl5_emp + counttls5_emp
+    #     main_count5 = counttl5_emp
+    # else:
+    #     main_count5 = counttl5_emp + counttls5_emp
+
+    # if counttl5_emp == '':
+    #     main_count5 = counttls5_emp
+    # elif counttls5_emp == '':
+    #     main_count5 = counttl5_emp
+    # else:
+    #     main_count5 = counttl5_emp + counttls5_emp
+        
+    # if counttl6_emp != '' and counttls6_emp == '':
+    #     # main_count6 = counttl6_emp + counttls6_emp
+    #     main_count6 = counttl6_emp
+    # else:
+    #     main_count6 = counttl6_emp + counttls6_emp
+        
+
+    # if counttl7_emp != '' and counttls7_emp == '':
+    #     # main_count7 = counttl7_emp + counttls7_emp
+    #     main_count7 = counttl7_emp
+    # else:
+    #     main_count7 = counttl7_emp + counttls7_emp
+    
+    # if counttl8_emp != '' and counttls8_emp == '':
+    #     # main_count8 = counttl8_emp + counttls8_emp
+    #     main_count8 = counttl8_emp
+    # else:
+    #     main_count8 = counttl8_emp + counttls8_emp
+
+    # if counttl9_emp != '' and counttls9_emp == '':
+    #     # main_count9 = counttl9_emp + counttls9_emp
+    #     main_count9 = counttl9_emp
+    # else:
+    #     main_count9 = counttl9_emp + counttls9_emp
+        
+    # if counttl10_emp != '' and counttls10_emp == '':
+    #     # main_count10 = counttl10_emp + counttls10_emp
+    #     main_count10 = counttl10_emp
+    # else:
+    #     main_count10 = counttl10_emp + counttls10_emp
+        
+
+    # if counttl11_emp != '' and counttls11_emp == '':
+    #     # main_count11 = counttl11_emp + counttls11_emp
+    #     main_count11 = counttl11_emp
+    # else:
+    #     main_count11 = counttl11_emp + counttls11_emp                                       
+
+
+
+
+    # if counttl12_emp != '' and counttls12_emp == '':
+    #     # main_count12 = counttl12_emp + counttls12_emp
+    #     main_count12 = counttl12_emp
+    # else:
+    #     main_count12 = counttl12_emp + counttls12_emp
+
+    # if counttl13_emp != '' and counttls13_emp == '':
+    #     # main_count13 = counttl13_emp + counttls13_emp
+    #     main_count13 = counttl13_emp
+    # else:
+    #     main_count13 = counttl13_emp + counttls13_emp    
     #main--------datasd exit ---------------------------------------------    
 
 

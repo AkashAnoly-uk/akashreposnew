@@ -1,0 +1,30 @@
+{% extends "employee_register/base.html" %}
+
+
+{% block content %}
+
+
+<h3><b>ReasssignedAssign Task </b></h3>
+
+<h3>Do you Really want to Reassign this person if they not assigned, it will create problem ??????????</h3>
+
+
+
+
+   <div class="col-md-8" ><br>
+            <a href="{% url 'reassign_user' %}" style="color:whitesmoke;margin-left: 0px;margin-top: -10px;" class="btn btn-info">
+                <i class="fas fa-stream"></i> YES
+            </a>
+   </div>
+
+   <div class="col-md-8" ><br>
+            <a href="{% url 'assign_task' %}" style="color:whitesmoke;margin-left: 0px;margin-top: -10px;" class="btn btn-info">
+                <i class="fas fa-stream"></i> Back
+            </a>
+   </div>
+
+
+
+
+{% endblock content %}
+
